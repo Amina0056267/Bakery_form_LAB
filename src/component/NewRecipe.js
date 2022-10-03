@@ -28,5 +28,30 @@ const NewRecipe = ({onSubmit})=> {
         
         onSubmit(newRecipe);
     }
+
+    return (
+        <form onSubmit={handleFormSubmission}>
+            <label htmlFor="name">Cake name:</label>
+            <input 
+                type="text" 
+                id="name"
+                onChange={handleCakeNameChange}
+            />
+            <label htmlFor="ingredients">Ingredients:</label>
+            <input 
+                type="text"
+                id="ingredients" 
+                onChange={handleIngredientsChange}
+            />
+            <label htmlFor="rating">Rating:</label>
+            <input 
+                type="number" 
+                id="rating"
+                onChange={handleRatingChange}
+            />
+            <input type="submit" value="Add Recipe"/>
+        </form>
+    );
 }
+
     export default NewRecipe;
